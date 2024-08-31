@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #5AB2FF;
+}
+
+.logo-contain {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.2rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.bx-code-alt {
+  font-size: 2rem;
+  color: #000;
+}
+
+.logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #A0DEFF;
+  transition: 0.2s all;
+}
+
+.nav-list:hover {
+  background-color: #CAF4FF;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.config-function {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.bx-moon {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+#searchbar {
+  border: none;
+  padding: 0.2rem;
+  outline: none;
+  border-radius: 3px;
+  text-align: center;
+  color: #000;
+  background-color: #A0DEFF;
+  font-weight: 500;
+}
+
+#searchbar::-moz-placeholder {
+  color: #000;
+  font-weight: 500;
+}
+
+#searchbar::placeholder {
+  color: #000;
+  font-weight: 500;
+}
+
+.toggle-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-bars {
+  font-size: 1.3rem;
+}/*# sourceMappingURL=Style.css.map */
