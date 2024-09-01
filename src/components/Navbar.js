@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isSidebaropen, setisSidebarOpen] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbar">
-        <div className="logo-contain">
+        <Link to="/" className="logo-contain">
           <img
             src="https://i.ibb.co/RNSJXNC/FB-IMG-1652607151685.jpg"
             alt="Logo"
@@ -39,37 +40,37 @@ const Navbar = () => {
           <p className="logo-title">
             <i class="bx bx-code-alt"></i> sandeep kumar
           </p>
-        </div>
+        </Link>
         <ul className="nav-items">
           <li className="nav-list">
-            <a href="#" className="nav-link">
+            <Link to="/education" className="nav-link">
               education
-            </a>
+            </Link>
           </li>
           <li className="nav-list">
-            <a href="#" className="nav-link">
+            <Link to="/gear" className="nav-link">
               gears
-            </a>
+            </Link>
           </li>
           <li className="nav-list">
-            <a href="#" className="nav-link">
+            <Link to="/contributor" className="nav-link">
               contributors
-            </a>
+            </Link>
           </li>
           <li className="nav-list">
-            <a href="#" className="nav-link">
+            <Link to="/project" className="nav-link">
               projects
-            </a>
+            </Link>
           </li>
           <li className="nav-list">
-            <a href="#" className="nav-link">
+            <Link to="/services" className="nav-link">
               services
-            </a>
+            </Link>
           </li>
           <li className="nav-list">
-            <a href="#" className="nav-link">
+            <Link to="/contact" className="nav-link">
               contact us
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="config-function">
@@ -95,7 +96,7 @@ const Navbar = () => {
       </div>
       <aside className={`sidebar ${isSidebaropen ? 'open' : ''}`}>
         <div className="side-logo-contain-and-toggle">
-          <div className="s-logo-contain">
+          <Link to="/" className="s-logo-contain">
             <img
               src="https://i.ibb.co/RNSJXNC/FB-IMG-1652607151685.jpg"
               alt="Logo"
@@ -104,7 +105,7 @@ const Navbar = () => {
             <p className="logo-title"  onClick={toggleSidebar}>
               <i class="bx bx-code-alt"></i> sandeep kumar
             </p>
-          </div>
+          </Link>
           <div className="close-toggle-icon" onClick={toggleSidebar}>
             <i className="fa-solid fa-x"></i>
           </div>
@@ -112,34 +113,34 @@ const Navbar = () => {
         <div className="s-side-items">
           <ul className="side-items">
             <li className="side-list">
-              <a href="#" className="side-link"  onClick={toggleSidebar}>
+              <Link to="/education" className="side-link"  onClick={toggleSidebar}>
                 education
-              </a>
+              </Link>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link"  onClick={toggleSidebar}>
+              <Link to="/gear" className="side-link"  onClick={toggleSidebar}>
                 gears
-              </a>
+              </Link>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link"  onClick={toggleSidebar}>
+              <Link to="/contributor" className="side-link"  onClick={toggleSidebar}>
                 contributors
-              </a>
+              </Link>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link"  onClick={toggleSidebar}>
+              <Link to="/project" className="side-link"  onClick={toggleSidebar}>
                 projects
-              </a>
+              </Link>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link"  onClick={toggleSidebar}>
+              <Link to="/services" className="side-link"  onClick={toggleSidebar}>
                 services
-              </a>
+              </Link>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link"  onClick={toggleSidebar}>
+              <Link to="/contact" className="side-link"  onClick={toggleSidebar}>
                 contact us
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="side-config-function">
