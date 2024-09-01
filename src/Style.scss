@@ -6,8 +6,13 @@
   font-weight: 400;
   font-family: "poppins", sans-serif;
 }
-body {
+.dark-mode{
+  background-color: #00012c;
+  color: #fff;
+}
+.light-mode{
   background-color: #f9f9f9;
+  color: #111;
 }
 .navbar {
   display: flex;
@@ -78,8 +83,9 @@ body {
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 }
-.bx-moon {
+.bx-moon, .bx-sun{
   color: #000;
   font-size: 1.5rem;
 }
@@ -174,6 +180,7 @@ body {
 }
 .fa-x{
   font-size: 1.5rem;
+  color: #000;
 }
 .s-side-items{
   display: flex;

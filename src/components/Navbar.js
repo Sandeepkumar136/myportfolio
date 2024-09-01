@@ -1,10 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [isSidebaropen,setisSidebarOpen]=useState(false);
-  const toggleSidebar=()=>{
+  const [isSidebaropen, setisSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
     setisSidebarOpen(!isSidebaropen);
   }
+  const [darkMode, Setdarkmode] = useState(() => {
+    const savedTheme = localStorage.getItem('darkmode');
+    return savedTheme === 'true' ? true : false;
+  })
+
+  const screenModeClicker = () => {
+    Setdarkmode(perMode => {
+      const newMode = !perMode;
+      localStorage.setItem('darkmode', newMode);
+      return newMode;
+    });
+  };
+
+  useEffect(()=>{
+    if(darkMode){
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    }else{
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+    }
+}, [darkMode]);
   return (
     <div>
       <div className="navbar">
@@ -59,8 +81,8 @@ const Navbar = () => {
               id="searchbar"
             />
           </form>
-          <button className="theme-btn">
-            <i className="bx bx-moon"></i>
+          <button className="theme-btn" onClick={screenModeClicker}>
+            {darkMode?(<i className="bx bx-moon"></i>):(<i className="bx bx-sun"></i>)}
           </button>
         </div>
         <div className="toggle-nav">
@@ -71,7 +93,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <aside className={`sidebar ${isSidebaropen ? 'open': ''}`}>
+      <aside className={`sidebar ${isSidebaropen ? 'open' : ''}`}>
         <div className="side-logo-contain-and-toggle">
           <div className="s-logo-contain">
             <img
@@ -79,7 +101,7 @@ const Navbar = () => {
               alt="Logo"
               className="logo-img"
             />
-            <p className="logo-title">
+            <p className="logo-title"  onClick={toggleSidebar}>
               <i class="bx bx-code-alt"></i> sandeep kumar
             </p>
           </div>
@@ -90,49 +112,52 @@ const Navbar = () => {
         <div className="s-side-items">
           <ul className="side-items">
             <li className="side-list">
-              <a href="#" className="side-link">
+              <a href="#" className="side-link"  onClick={toggleSidebar}>
                 education
               </a>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link">
+              <a href="#" className="side-link"  onClick={toggleSidebar}>
                 gears
               </a>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link">
+              <a href="#" className="side-link"  onClick={toggleSidebar}>
                 contributors
               </a>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link">
+              <a href="#" className="side-link"  onClick={toggleSidebar}>
                 projects
               </a>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link">
+              <a href="#" className="side-link"  onClick={toggleSidebar}>
                 services
               </a>
             </li>
             <li className="side-list">
-              <a href="#" className="side-link">
+              <a href="#" className="side-link"  onClick={toggleSidebar}>
                 contact us
               </a>
             </li>
           </ul>
           <div className="side-config-function">
-          <form action="#" id="searchbox" method="get">
-            <input
-              type="text"
-              name="search bar"
-              placeholder="CTRL + K"
-              id="searchbar2"
-            />
-          </form>
-          <button className="theme-btn">
-            <i className="bx bx-moon"></i>
-          </button>
-        </div>
+            <form action="#" id="searchbox" method="get">
+              <input
+                type="text"
+                name="search bar"
+                placeholder="CTRL + K"
+                id="searchbar2" onSubmit={toggleSidebar}
+              />
+            </form>
+            <button className="theme-btn" onClick={()=>{
+              toggleSidebar();
+              screenModeClicker();
+            }}>
+              {darkMode?(<i className="bx bx-moon"></i>):(<i className="bx bx-sun"></i>)}
+            </button>
+          </div>
         </div>
       </aside>
     </div>
