@@ -355,17 +355,72 @@
   }
 }
 @media only screen and (max-width: 426px) {
-  .index-text-section{
+  .index-text-section {
     padding: 0.5rem;
   }
-  .heading-contain h2{
+  .heading-contain h2 {
     font-size: 1.3rem;
   }
-  .text-contain-index-pera{
+  .text-contain-index-pera {
     font-size: 0.9rem;
   }
-  .button-index-contain button{
+  .button-index-contain button {
     padding: 0.3rem;
     font-size: 0.8rem;
   }
+}
+
+// home Cards
+.home-heading {
+  margin: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1.5px solid #d900ff;
+}
+.h-card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  margin: 1rem 0.5rem;
+  // flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+  .h-card-container{
+    flex-wrap: wrap;
+  }
+  
+}
+.h-card-contain {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px 1px rgba(78, 78, 79, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(84, 84, 84, 0.75);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(62, 62, 62, 0.75);
+}
+.h-title {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 450;
+  background-color: #5ab2ff;
+}
+.h-descrip {
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  font-size: 0.9rem;
+}
+.h-btn-contain {
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+}
+.h-card-btn {
+  border: none;
+  outline: none;
+  background-color: #5ab2ff;
+  padding: 5px 15px;
+  font-weight: 450;
+  cursor: pointer;
+  border-radius: 5px;
 }
