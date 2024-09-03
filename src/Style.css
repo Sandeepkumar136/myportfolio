@@ -181,6 +181,7 @@
   width: 350px;
   transform: translateX(-100%);
   transition: 0.8s ease-in-out;
+  z-index: 1000;
 }
 
 .sidebar.open {
@@ -197,6 +198,7 @@
   justify-content: space-evenly;
   width: 100%;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .s-logo-contain {
@@ -430,7 +432,7 @@
   text-transform: capitalize;
   font-size: 1.2rem;
   font-weight: 450;
-  background-color: #5ab2ff;
+  background-color: rgb(90, 178, 255);
 }
 
 .h-descrip {
@@ -490,12 +492,12 @@
 }
 
 .footer-container {
-  border: 2px solid #000;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 1rem;
+  flex-wrap: wrap;
 }
 
 .footer-title {
@@ -511,7 +513,6 @@
 }
 
 .social-links {
-  border: 2px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -547,4 +548,13 @@
 
 .bxl-github {
   color: #47005f;
+}
+
+@media only screen and (max-width: 425px) {
+  .footer-container {
+    padding: 2rem 1rem;
+  }
+  .footer-title {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=Style.css.map */
