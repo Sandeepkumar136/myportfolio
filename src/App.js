@@ -9,6 +9,7 @@ import Project from './components/Project';
 import Home from './components/Home';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </div>
+      <Footer/>
     </Router>
     </>
   )
