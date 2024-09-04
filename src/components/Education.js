@@ -71,6 +71,7 @@ const Education = () => {
       <h2 className="edu-heading">
         Education
       </h2>
+      <div className="e-card-contain">
       {Es_Date.map((item)=>(
         <div key={item.id} className="e-card">
         <div className="e-header">
@@ -85,12 +86,13 @@ const Education = () => {
           <p className="e-card-text">
             {expandedId===item.id? item.description : getShortDescription(item.description)}
           </p>
-        <button onClick={()=>toggleDescription(item.id)}>
-        {expandedId===item.id ? <i class='bx bx-chevron-up'></i> : <i class='bx bx-chevron-down' ></i>}
+        <button className='toggle-btn-e-card' onClick={()=>toggleDescription(item.id)}>
+        {expandedId===item.id ? <i class='toggle-icon-e bx bx-chevron-up'></i> : <i class='toggle-icon-e bx bx-chevron-down' ></i>}
       </button>
         </div>
       </div>
       ))}
+      </div>
     </div>
   )
 }

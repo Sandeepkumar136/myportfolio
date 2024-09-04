@@ -517,3 +517,55 @@
   }
 }
 // Education
+.e-card-contain{
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.e-card{
+  border: 2px solid #000;
+  width: 350px;
+  height: 400px;
+  // padding: 0.5rem;
+}
+.e-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // gap: 0.5rem;
+  border: 2px solid #000;
+  padding: 0.5rem;
+}
+.e-card-title{
+  font-size: 1.1rem;
+  font-weight: 420;
+}
+.e-card-date{
+  font-size: 0.8rem;
+}
+.e-card-description{
+  padding: 0.5rem;
+  display: flex;
+  justify-content: start;
+}
+.e-card-text{
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.toggle-btn-e-card{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.toggle-icon-e{
+  font-size: 2rem;
+  color: #1900ff;
+}
