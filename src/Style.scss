@@ -518,7 +518,6 @@
 }
 // Education
 .e-card-contain{
-  border: 2px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -526,18 +525,29 @@
   gap: 2rem;
 }
 .e-card{
-  border: 2px solid #000;
   width: 350px;
   height: 400px;
   // padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px 1px rgba(48, 48, 48, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(36, 36, 36, 0.75);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(42, 41, 41, 0.75);
+}
+.dark-mode .e-card{
+  background-color: #111;
 }
 .e-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   // gap: 0.5rem;
-  border: 2px solid #000;
   padding: 0.5rem;
+  background-color: #5ab2ff;
+}
+.dark-mode .e-header{
+  color: #000;
 }
 .e-card-title{
   font-size: 1.1rem;
@@ -550,6 +560,11 @@
   padding: 0.5rem;
   display: flex;
   justify-content: start;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.dark-mode .e-card-description{
+  background-color: #111;
 }
 .e-card-text{
   font-size: 1rem;
@@ -564,6 +579,7 @@
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .toggle-icon-e{
   font-size: 2rem;
