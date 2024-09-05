@@ -86,10 +86,10 @@ const Education = () => {
           <p className="e-card-text">
             {expandedId===item.id? item.description : getShortDescription(item.description)}
           </p>
+        </div>
         <button className='toggle-btn-e-card' onClick={()=>toggleDescription(item.id)}>
         {expandedId===item.id ? <i class='toggle-icon-e bx bx-chevron-up'></i> : <i class='toggle-icon-e bx bx-chevron-down' ></i>}
       </button>
-        </div>
       </div>
       ))}
       </div>

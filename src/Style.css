@@ -558,23 +558,28 @@
     font-size: 1rem;
   }
 }
+.edu-heading {
+  font-size: 2rem;
+  margin: 0.5rem;
+  border-bottom: 2px solid #d000ff;
+}
+
 .e-card-contain {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .e-card {
   width: 350px;
-  height: 400px;
   background-color: #fff;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0px 0px 3px 1px rgba(48, 48, 48, 0.75);
   -webkit-box-shadow: 0px 0px 3px 1px rgba(36, 36, 36, 0.75);
   -moz-box-shadow: 0px 0px 3px 1px rgba(42, 41, 41, 0.75);
+  transition: 0.4s all;
 }
 
 .dark-mode .e-card {
@@ -634,4 +639,21 @@
 .toggle-icon-e {
   font-size: 2rem;
   color: #1900ff;
+}
+
+@media only screen and (max-width: 424px) {
+  .e-card {
+    width: 100%;
+    margin: 0 0.8rem;
+  }
+  .e-card-title {
+    font-size: 0.9rem;
+  }
+  .e-card-text {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  .edu-heading {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=Style.css.map */
