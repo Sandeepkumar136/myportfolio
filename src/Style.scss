@@ -374,7 +374,42 @@
 }
 
 // home Cards
-
+.home-heading {
+  margin: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1.5px solid #d900ff;
+}
+@media only screen and (max-width: 545px) {
+  .home-heading {
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+}
+.h-card-container{
+  border: 2px solid #000;
+  width: 160vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  margin: auto;
+  gap: 2rem;
+}
+.h-title{
+  font-size: 1.2rem;
+  font-weight: 450;
+  color: #1900ff;
+}
+.h-descrip{
+  font-size: 1rem;
+  opacity: 0.7;
+  text-transform: capitalize;
+}
 // Footer
 .footer-container {
   background-color: transparent;
@@ -436,7 +471,9 @@
 // Education
 .edu-heading{
   font-size: 2rem;
-  margin: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  // background-color: #f1f1f1;
   border-bottom: 2px solid #d000ff;
 }
 .e-card-contain{
@@ -467,17 +504,19 @@
   align-items: center;
   // gap: 0.5rem;
   padding: 0.5rem;
-  background-color: #5ab2ff;
+  // background-color: #5ab2ff;
 }
 .dark-mode .e-header{
   color: #000;
 }
 .e-card-title{
   font-size: 1.1rem;
+  color: #1900ff;
   font-weight: 420;
 }
 .e-card-date{
   font-size: 0.8rem;
+  color: #1900ff;
 }
 .e-card-description{
   padding: 0.5rem;
@@ -493,6 +532,7 @@
   font-size: 1rem;
   font-weight: 400;
   text-transform: capitalize;
+  opacity: 0.7;
 }
 .toggle-btn-e-card{
   display: flex;
