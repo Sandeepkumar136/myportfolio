@@ -468,7 +468,7 @@
 .bxl-telegram {
   color: #2c72ff;
 }
-.bxl-github {
+.footer-icons-git {
   color: #47005f;
 }
 @media only screen and (max-width: 425px) {
@@ -485,7 +485,8 @@
   padding: 1rem;
   margin-bottom: 1rem;
   // background-color: #f1f1f1;
-  border-bottom: 2px solid #d000ff;
+  // text-decoration: #d000ff;
+  // text-d
 }
 .e-card-contain{
   display: flex;
@@ -575,3 +576,31 @@
     font-size: 1rem;
   }
 }
+// Edu lang
+.lang-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang-item{
+  display: flex;
+  width: 50%;
+  justify-content: start;
+  list-style-type: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lang-icon{
+  font-size: 5rem;
+  color: #555;
+} 
+@media only screen and (max-width: 768px) {
+  .lang-item{
+    width: 100%;
+  }
+  .lang-icon{
+    font-size: 2.5rem;
+  }
+  
+}
+// Resume Container

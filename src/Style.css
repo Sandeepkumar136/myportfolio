@@ -504,7 +504,7 @@
   color: #2c72ff;
 }
 
-.bxl-github {
+.footer-icons-git {
   color: #47005f;
 }
 
@@ -520,7 +520,6 @@
   font-size: 2rem;
   padding: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #d000ff;
 }
 
 .e-card-contain {
@@ -616,5 +615,33 @@
   }
   .edu-heading {
     font-size: 1rem;
+  }
+}
+.lang-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang-item {
+  display: flex;
+  width: 50%;
+  justify-content: start;
+  list-style-type: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lang-icon {
+  font-size: 5rem;
+  color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+  .lang-item {
+    width: 100%;
+  }
+  .lang-icon {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=Style.css.map */

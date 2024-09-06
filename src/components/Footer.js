@@ -10,7 +10,7 @@ const Footer = () => {
         <li className="social-links"><a href="https://www.facebook.com/profile.php?id=61551699696823" title='Facebook' className="social-hyper-link"><i class='footer-icons bx bxl-facebook'></i></a></li>
         <li className="social-links"><a href="https://www.instagram.com/" title='Instagram' className="social-hyper-link"><i class='footer-icons bx bxl-instagram' ></i></a></li>
         <li className="social-links"><a href="https://t.me/CodewithSanju" title='Telegram' className="social-hyper-link"><i class='footer-icons bx bxl-telegram' ></i></a></li>
-        <li className="social-links"><a href="https://github.com/Sandeepkumar136" title='Github' className="social-hyper-link"><i class='footer-icons bx bxl-github' ></i></a></li>
+        <li className="social-links"><a href="https://github.com/Sandeepkumar136" title='Github' className="social-hyper-link"><i class='footer-icons footer-icons-git bx bxl-github' ></i></a></li>
       </ul>
     </div>
   )
