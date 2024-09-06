@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Loader from './Loader'
+import React, { useState } from 'react';
+import Loader from './Loader';
 
 const Es_Date = [{
   id: "1",
@@ -57,6 +57,16 @@ const Es_Date = [{
 
 const Education = () => {
   const [expandedId, setExpandedId] = useState(null);
+  const [isOpen, setIsOpen]=useState(false);
+
+  const openBox=()=>{
+    setIsOpen(true)
+  }
+  const handleOverlayclick=(e)=>{
+    if(e.target.className==='dialog-overlay'){
+      setIsOpen(false)
+    }
+  }
 
   const toggleDescription = (id) => {
     setExpandedId(expandedId === id ? null : id);
@@ -123,9 +133,21 @@ const Education = () => {
           <p className="text-resu">
           Explore my skills, experience, and projects by downloading my resume. It's a quick and easy way to learn more about my professional background.
           </p>
-          <button className="res-open-btn">Open</button>
+          <button onClick={openBox} className="res-open-btn">Open</button>
         </div>
       </div>
+      {
+        isOpen && (
+          <div onClick={handleOverlayclick} className="dialog-overlay">
+            <div className="dialog-box">
+              <h1 className="heading-qr">Scan to See Resume.</h1>
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=google.com/pdf.ac/43tohV" alt="" className="qr-code" />
+              <span className="middle-span">or</span>
+              <a href="https://i.ibb.co/TwyMkKm/resume-Sandeep.jpg" className="resume-link">download</a>
+            </div>
+          </div>
+        )
+      }
     </div>
   )
 }
