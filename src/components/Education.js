@@ -115,9 +115,15 @@ const Education = () => {
           <li className="lang-list"><i class='lang-icon bx bxl-redux'></i></li>
         </ul>
       </div>
+      <h2 className="edu-heading">
+        Resume
+      </h2>
       <div className="res-container">
-        <div className="res-fps-contain">
-          
+        <div className="resu-contain">
+          <p className="text-resu">
+          Explore my skills, experience, and projects by downloading my resume. It's a quick and easy way to learn more about my professional background.
+          </p>
+          <button className="res-open-btn">Open</button>
         </div>
       </div>
     </div>

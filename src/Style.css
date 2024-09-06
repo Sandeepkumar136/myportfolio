@@ -519,7 +519,8 @@
 .edu-heading {
   font-size: 2rem;
   padding: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .e-card-contain {
@@ -643,5 +644,40 @@
   }
   .lang-icon {
     font-size: 2.5rem;
+  }
+}
+.res-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resu-contain {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+  flex-direction: column;
+  margin: 0 0.5rem;
+}
+
+.res-open-btn {
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  background-color: #2c72ff;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.text-resu {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 455px) {
+  .text-resu {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=Style.css.map */
