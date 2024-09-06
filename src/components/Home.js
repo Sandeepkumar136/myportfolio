@@ -24,6 +24,7 @@ const HS_Arr=[{
 }]
 
 const Home = () => {
+  const data=HS_Arr.sort((a,b)=> {return b.id-a.id});
   return (
     <div>
       <Loader/>
@@ -33,7 +34,7 @@ const Home = () => {
       </h2>
       <div className="h-card-container">
         {
-          HS_Arr.map((item)=>(
+          data.map((item)=>(
             <div key={item.id} className="h-card-contain">
               <div className="h-title">
                 {item.title}

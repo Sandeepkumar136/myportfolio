@@ -38,7 +38,7 @@ const Navbar = () => {
             className="logo-img"
           />
           <p className="logo-title">
-            <i class="bx bx-code-alt"></i> sandeep kumar
+            <i class="bx bx-code-alt"></i> codewith sanju
           </p>
         </Link>
         <ul className="nav-items">

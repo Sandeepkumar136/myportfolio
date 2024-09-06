@@ -414,8 +414,7 @@
   }
 }
 .h-card-container {
-  border: 2px solid #000;
-  width: 160vh;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -438,6 +437,18 @@
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: 756px) {
+  .h-card-container {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .h-title {
+    font-size: 1rem;
+  }
+  .h-descrip {
+    font-size: 0.8rem;
+  }
+}
 .footer-container {
   background-color: transparent;
   display: flex;
