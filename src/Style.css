@@ -622,6 +622,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 0.5rem;
 }
 
 .lang-item {
@@ -680,4 +681,86 @@
   .text-resu {
     font-size: 0.8rem;
   }
+}
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(190, 187, 187, 0.3490196078);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dialog-overlay.fade-in {
+  opacity: 1;
+}
+
+.dialog-overlay.dialog-overlay.fade-out {
+  opacity: 0;
+}
+
+.dialog-box {
+  background-color: #5ab2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 0.2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0.8);
+}
+
+.dialog-animation-in {
+  transform: scale(1);
+}
+
+.dialog-animation-out {
+  transform: 0.8;
+}
+
+.heading-qr {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.middle-span {
+  font-size: 1rem;
+}
+
+.resume-link {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #1900ff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.resume-link:hover {
+  background-color: #1900ff;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-qr {
+    font-size: 1rem;
+  }
+  .dialog-box {
+    padding: 1rem 2rem;
+  }
+}
+.dark-mode .dialog-box {
+  background-color: #0a0061;
 }/*# sourceMappingURL=Style.css.map */

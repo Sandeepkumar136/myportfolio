@@ -58,13 +58,21 @@ const Es_Date = [{
 const Education = () => {
   const [expandedId, setExpandedId] = useState(null);
   const [isOpen, setIsOpen]=useState(false);
+  const [isAnimation, setIsAnimation]=useState(false);
 
   const openBox=()=>{
-    setIsOpen(true)
+    setIsAnimation(true)
+    setIsOpen(true);
+  }
+  const closeBox=()=>{
+    setIsAnimation(false);
+    setTimeout(() => {
+      setIsOpen(false)
+    }, 300);
   }
   const handleOverlayclick=(e)=>{
-    if(e.target.className==='dialog-overlay'){
-      setIsOpen(false)
+    if(e.target.className.includes('dialog-overlay')){
+      closeBox()
     }
   }
 
@@ -138,12 +146,12 @@ const Education = () => {
       </div>
       {
         isOpen && (
-          <div onClick={handleOverlayclick} className="dialog-overlay">
-            <div className="dialog-box">
+          <div onClick={handleOverlayclick} className={`dialog-overlay ${isAnimation ? 'fade-in':'fade-out'}`}>
+            <div className={`dialog-box ${isAnimation ? 'dialog-animation-in':'dialog-animation-out'}`}>
               <h1 className="heading-qr">Scan to See Resume.</h1>
               <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=google.com/pdf.ac/43tohV" alt="" className="qr-code" />
               <span className="middle-span">or</span>
-              <a href="https://i.ibb.co/TwyMkKm/resume-Sandeep.jpg" className="resume-link">download</a>
+              <a href="https://i.ibb.co/TwyMkKm/resume-Sandeep.jpg" target='_blank' className="resume-link">download</a>
             </div>
           </div>
         )
