@@ -3,13 +3,13 @@ import Navbar from './components/Navbar';
 import './Style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Education from './components/Education';
-import Gear from './components/Gear';
 import Contributors from './components/Contributors';
 import Project from './components/Project';
 import Home from './components/Home';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Gear from './components/Gear';
 
 const App = () => {
   return (

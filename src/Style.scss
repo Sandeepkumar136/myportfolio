@@ -712,86 +712,138 @@
 }
 
 // Gear data
-.gear-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.gear-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
+/* Card styles */
 .card {
-  width: 300px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 0.5rem;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content spacing */
+  height: 100%; /* Makes all cards the same height */
   overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 5px;
+}
+.dark-mode .card{
+  background-color: #111;
 }
 
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image overflow container */
 .img-g-overflow {
   overflow: hidden;
-  height: 50%;
+  flex-shrink: 0; /* Prevent shrinking of the image container */
 }
 
 .img-card-g {
-  height: 100%;
-  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  transition: transform 0.4s ease-in-out;
 }
 
+.card:hover .img-card-g {
+  transform: scale(1.1);
+}
+
+/* Text container */
 .g-card-text-contain {
-  margin-top: 0.5rem;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure equal spacing */
+  flex-grow: 1; /* Fill the remaining space */
 }
 
 .heading-g {
-  font-size: 1.2rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .text-g {
   font-size: 1rem;
   color: #555;
+  margin-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits the description to 3 lines */
+  -webkit-box-orient: vertical;
 }
 
 .btn-link-g {
   display: inline-block;
-  margin-top: 0.5rem;
-  padding: 5px 20px;
+  padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
-  text-decoration: none;
   border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align button at the start */
+  text-transform: capitalize;
 }
 
+.btn-link-g:hover {
+  background-color: #0056b3;
+}
+
+/* Gear container */
+.gear-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.gear-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Pagination */
 .pagination {
-  margin-top: 0.5rem;
   display: flex;
-  list-style: none;
   justify-content: center;
-  gap: 10px;
+  list-style-type: none;
+  padding: 0;
 }
 
-.pagination-link {
-  padding: 5px 10px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  text-decoration: none;
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.pagination li:hover {
+  transform: scale(1.1);
+}
+
+.pagination .active {
+  font-weight: bold;
   color: #007bff;
 }
 
-.pagination-active {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.2rem 0.5rem;
-}
+@media (max-width: 768px) {
+  .img-card-g {
+    height: 150px;
+  }
 
-.pagination-disabled {
-  opacity: 0;
+  .heading-g {
+    font-size: 0.9rem;
+  }
+  .text-g{
+    font-size: 0.8rem;
+    // opacity: 0.8;
+  }
+  .btn-link-g {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
 }
