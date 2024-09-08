@@ -388,7 +388,7 @@
     font-size: 1.3rem;
   }
 }
-.h-card-container{
+.h-card-container {
   width: 70%;
   display: flex;
   justify-content: center;
@@ -399,25 +399,25 @@
   margin: auto;
   gap: 2rem;
 }
-.h-title{
+.h-title {
   font-size: 1.2rem;
   font-weight: 450;
   color: #1900ff;
 }
-.h-descrip{
+.h-descrip {
   font-size: 1rem;
   opacity: 0.7;
   text-transform: capitalize;
 }
 @media only screen and (max-width: 756px) {
-  .h-card-container{
+  .h-card-container {
     width: 100%;
     padding: 0 0.5rem;
   }
-  .h-title{
+  .h-title {
     font-size: 1rem;
   }
-  .h-descrip{
+  .h-descrip {
     font-size: 0.8rem;
   }
 }
@@ -480,7 +480,7 @@
   }
 }
 // Education
-.edu-heading{
+.edu-heading {
   font-size: 2rem;
   padding: 1rem;
   padding-bottom: 0.4rem;
@@ -489,14 +489,14 @@
   // text-decoration: #d000ff;
   // text-d
 }
-.e-card-contain{
+.e-card-contain {
   display: flex;
   justify-content: center;
   // align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.e-card{
+.e-card {
   width: 350px;
   // height: 400px;
   // padding: 0.5rem;
@@ -508,10 +508,10 @@
   -moz-box-shadow: 0px 0px 3px 1px rgba(42, 41, 41, 0.75);
   transition: 0.4s all;
 }
-.dark-mode .e-card{
+.dark-mode .e-card {
   background-color: #111;
 }
-.e-header{
+.e-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -519,35 +519,35 @@
   padding: 0.5rem;
   // background-color: #5ab2ff;
 }
-.dark-mode .e-header{
+.dark-mode .e-header {
   color: #000;
 }
-.e-card-title{
+.e-card-title {
   font-size: 1.1rem;
   color: #1900ff;
   font-weight: 420;
 }
-.e-card-date{
+.e-card-date {
   font-size: 0.8rem;
   color: #1900ff;
 }
-.e-card-description{
+.e-card-description {
   padding: 0.5rem;
   display: flex;
   justify-content: start;
   background-color: #fff;
   border-radius: 6px;
 }
-.dark-mode .e-card-description{
+.dark-mode .e-card-description {
   background-color: #111;
 }
-.e-card-text{
+.e-card-text {
   font-size: 1rem;
   font-weight: 400;
   text-transform: capitalize;
   opacity: 0.7;
 }
-.toggle-btn-e-card{
+.toggle-btn-e-card {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -557,34 +557,34 @@
   background-color: transparent;
   cursor: pointer;
 }
-.toggle-icon-e{
+.toggle-icon-e {
   font-size: 2rem;
   color: #1900ff;
 }
 @media only screen and (max-width: 424px) {
-  .e-card{
+  .e-card {
     width: 100%;
     margin: 0 0.8rem;
   }
-  .e-card-title{
+  .e-card-title {
     font-size: 0.9rem;
   }
-  .e-card-text{
+  .e-card-text {
     font-size: 0.8rem;
     opacity: 0.8;
   }
-  .edu-heading{
+  .edu-heading {
     font-size: 1rem;
   }
 }
 // Edu lang
-.lang-container{
+.lang-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0.5rem;
 }
-.lang-item{
+.lang-item {
   display: flex;
   width: 50%;
   justify-content: start;
@@ -592,26 +592,25 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.lang-icon{
+.lang-icon {
   font-size: 5rem;
   color: #555;
-} 
+}
 @media only screen and (max-width: 768px) {
-  .lang-item{
+  .lang-item {
     width: 100%;
   }
-  .lang-icon{
+  .lang-icon {
     font-size: 2.5rem;
   }
-  
 }
 // Resume Container
-.res-container{
+.res-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.resu-contain{
+.resu-contain {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -619,7 +618,7 @@
   flex-direction: column;
   margin: 0 0.5rem;
 }
-.res-open-btn{
+.res-open-btn {
   border: none;
   outline: none;
   padding: 5px 20px;
@@ -628,18 +627,17 @@
   color: #fff;
   cursor: pointer;
 }
-.text-resu{
+.text-resu {
   text-transform: capitalize;
   opacity: 0.7;
 }
 @media only screen and (max-width: 455px) {
-  .text-resu{
+  .text-resu {
     font-size: 0.8rem;
   }
-  
 }
 // Open QR dialogue Box
-.dialog-overlay{
+.dialog-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -654,13 +652,13 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.dialog-overlay.fade-in{
+.dialog-overlay.fade-in {
   opacity: 1;
 }
-.dialog-overlay.dialog-overlay.fade-out{
+.dialog-overlay.dialog-overlay.fade-out {
   opacity: 0;
 }
-.dialog-box{
+.dialog-box {
   background-color: #5ab2ff;
   display: flex;
   justify-content: center;
@@ -672,21 +670,21 @@
   transition: transform 0.3s ease;
   transform: scale(0.8);
 }
-.dialog-animation-in{
+.dialog-animation-in {
   transform: scale(1);
 }
-.dialog-animation-out{
+.dialog-animation-out {
   transform: (0.8);
 }
-.heading-qr{
+.heading-qr {
   font-size: 1.2rem;
   text-transform: capitalize;
   opacity: 0.8;
 }
-.middle-span{
+.middle-span {
   font-size: 1rem;
 }
-.resume-link{
+.resume-link {
   text-transform: capitalize;
   text-decoration: none;
   font-size: 1rem;
@@ -696,19 +694,104 @@
   border-radius: 3px;
   transition: 0.3s ease-in-out;
 }
-.resume-link:hover{
+.resume-link:hover {
   background-color: #1900ff;
   color: #fff;
 }
 @media only screen and (max-width: 768px) {
-  .heading-qr{
+  .heading-qr {
     font-size: 1rem;
   }
-  .dialog-box{
+  .dialog-box {
     padding: 1rem 2rem;
   }
 }
-.dark-mode .dialog-box{
+.dark-mode .dialog-box {
   background-color: #0a0061;
   // color: #000;
+}
+
+// Gear data
+.gear-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gear-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 0.5rem;
+  height: 400px;
+  overflow: hidden;
+}
+
+.img-g-overflow {
+  overflow: hidden;
+  height: 50%;
+}
+
+.img-card-g {
+  height: 100%;
+  width: 100%;
+}
+
+.g-card-text-contain {
+  margin-top: 0.5rem;
+}
+
+.heading-g {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.text-g {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-link-g {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 5px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.pagination {
+  margin-top: 0.5rem;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-link {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.pagination-active {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+}
+
+.pagination-disabled {
+  opacity: 0;
 }

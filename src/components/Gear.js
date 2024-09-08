@@ -1,6 +1,6 @@
-import React from 'react'
-import Loader from './Loader'
-
+import React, { useState, useEffect } from 'react';
+import Loader from './Loader';
+import ReactPaginate from 'react-paginate';
 
 const GearData=[{
   id:'1',
@@ -22,14 +22,17 @@ const GearData=[{
   title:'Zeb-DLK-01',
   description:'I bought this when i did not have any external keyboard.Its is literally good for basic segment. Actually I tired roughly this keyborad but it do not have any complaint.',
   imglink:'https://i.ibb.co/YtfFvPB/keyboard.jpg',
-  shoplink:'https://www.amazon.in/Zebronics-DLK01-Multimedia-Keyboard-White/dp/B07RT67LV1/ref=sr_1_16?crid=7S5KTCINMXVY&keywords=keyboard&qid=1692533108&sprefix=keyboar%2Caps%2C368&sr=8-16&th=1'
+  shoplink:'https://www.amazon.in/Zebronics-DLK01-Multimedia-Keyboard-White/dp/B07RT67LV1/ref=sr_1_16?crid=7S5KTCINMXVY&keywords=keyboard&qid=1692533108&sprefix=keyboar%2Caps%2C368&sr=8-16&th=1',
+  buttonTitle:'view on amazon'
 },
 {
   id:'4',
   title:'HP Matel Drive',
   description:'This is a very nice affordable for store files. I mainly using for store project file, for install windiows and other Applications At around 499 INR, it is a lot of value for money!',
   imglink:'https://i.ibb.co/nP4hWLw/pendrive.jpg',
-  shoplink:'https://www.amazon.in/HP-FD236W-32GB-Drive-Gray/dp/B01L8ZL3X8/ref=sr_1_2?crid=1MVFOSFKUNYJY&keywords=hp+32gb+pendrive+metal+body+v232w&qid=1692539068&sprefix=hp+32gb+pendrive+metal+body+v232w%2Caps%2C829&sr=8-2'
+  shoplink:'https://www.amazon.in/HP-FD236W-32GB-Drive-Gray/dp/B01L8ZL3X8/ref=sr_1_2?crid=1MVFOSFKUNYJY&keywords=hp+32gb+pendrive+metal+body+v232w&qid=1692539068&sprefix=hp+32gb+pendrive+metal+body+v232w%2Caps%2C829&sr=8-2',
+  buttonTitle:'view on amazon'
+
 },
 {
   id:'5',
@@ -88,17 +91,79 @@ const GearData=[{
   buttonTitle:'view on amazon'
 },
 {
-  
+  id:'12',
+  title:'OnePlus Nord Buds',
+  description:'I bought this when it was launched. Its sound is immersive and bass is so good. Actually I need this because when I am tired of coding than I used to listen song, movies and etc.its charge is also fine',
+  imglink:'https://i.ibb.co/Tvs5yFs/buds-image.jpg',
+  shoplink:'https://www.amazon.in/OnePlus-Wireless-Earbuds-Drivers-Playback/dp/B0C8JB3G5W/ref=sr_1_2?keywords=oneplus%2Bnord%2Bbuds%2B2r&qid=1692534175&sprefix=oneplur%2Bnord%2Bbud%2Caps%2C312&sr=8-2&th=1',
+  buttonTitle:'view on amazon'
 }
 ]
 
-const Gear = () => {
+const GearCard = ({ title, img, description, shoplink, buttonTitle }) => {
   return (
-    <div>
-      <Loader/>
-      Gear
+    <div className="card">
+      <div className="img-g-overflow">
+        <div
+          style={{ backgroundImage: `url(${img})` }}
+          className="img-card-g"
+        ></div>
+      </div>
+      <div className="g-card-text-contain">
+        <h3 className="heading-g">{title}</h3>
+        <p className="text-g">{description}</p>
+        <a href={shoplink} className="btn-link-g">{buttonTitle}</a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
+const Gear = () => {
+  const [loading, setLoading] = useState(true);  // State to handle loading
+  const data = GearData.sort((a, b) => b.id - a.id);
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
+  
+  useEffect(() => {
+    // Simulate loading time
+    setTimeout(() => setLoading(false), 1000);  // Simulate data loading for 1 second
+  }, []);
+  
+  const indexofLastItem = (currentPage + 1) * itemsPerPage;
+  const indexofFirstItem = indexofLastItem - itemsPerPage;
+  const currentItems = data.slice(indexofFirstItem, indexofLastItem);
+
+  const handlePageClick = (e) => {
+    setCurrentPage(e.selected);
+  };
+
+  if (loading) {
+    return <Loader />;  // Show loader while loading
+  }
+
+  return (
+ <div className="gear-container">
+      <div className="gear-cards">
+        {currentItems.map((e) => (
+          <GearCard
+            key={e.id}
+            title={e.title}
+            img={e.imglink}
+            description={e.description}
+            shoplink={e.shoplink}
+            buttonTitle={e.buttonTitle}
+          />
+        ))}
+      </div>
+      <ReactPaginate
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
+        pageCount={Math.ceil(data.length / itemsPerPage)}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        activeClassName={"active"}
+      />
+    </div>
+  );
+};
 export default Gear;
