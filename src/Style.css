@@ -528,19 +528,36 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  padding: 2rem;
 }
 
 .e-card {
   width: 350px;
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 0px 3px 1px rgba(48, 48, 48, 0.75);
-  -webkit-box-shadow: 0px 0px 3px 1px rgba(36, 36, 36, 0.75);
-  -moz-box-shadow: 0px 0px 3px 1px rgba(42, 41, 41, 0.75);
-  transition: 0.4s all;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
 }
 
+.e-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .dark-mode .e-card {
   background-color: #111;
 }
@@ -548,74 +565,78 @@
 .e-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0.5rem;
+  background-color: #f7f7f7;
+  transition: background-color 0.3s;
 }
 
 .dark-mode .e-header {
-  color: #000;
+  background-color: #000;
 }
 
 .e-card-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #1900ff;
-  font-weight: 420;
+  font-weight: 500;
 }
 
 .e-card-date {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #1900ff;
 }
 
 .e-card-description {
-  padding: 0.5rem;
-  display: flex;
-  justify-content: start;
-  background-color: #fff;
-  border-radius: 6px;
-}
-
-.dark-mode .e-card-description {
-  background-color: #111;
+  padding: 0.75rem;
+  transition: max-height 0.4s ease-in-out;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .e-card-text {
   font-size: 1rem;
   font-weight: 400;
-  text-transform: capitalize;
-  opacity: 0.7;
+  color: #555;
 }
 
 .toggle-btn-e-card {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  margin: auto;
-  border: none;
-  outline: none;
+  width: 100%;
+  padding: 0.5rem;
   background-color: transparent;
   cursor: pointer;
+  transition: color 0.3s;
+  outline: none;
+  border: none;
+}
+
+.toggle-btn-e-card:hover .toggle-icon-e {
+  color: #ff6347; /* hover color change */
 }
 
 .toggle-icon-e {
   font-size: 2rem;
   color: #1900ff;
+  transition: color 0.3s ease;
 }
 
 @media only screen and (max-width: 424px) {
+  .e-card-contain {
+    padding: 0.5rem;
+  }
   .e-card {
     width: 100%;
-    margin: 0 0.8rem;
+    margin: 0 0.5rem;
   }
   .e-card-title {
     font-size: 0.9rem;
   }
   .e-card-text {
     font-size: 0.8rem;
-    opacity: 0.8;
   }
   .edu-heading {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 .lang-container {
