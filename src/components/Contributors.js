@@ -31,6 +31,41 @@ const Contributor=[{
   img:'https://i.ibb.co/8Y5BXZw/partner-3.jpg',
   description:'Data analysts interpret data, identify trends, and provide insights to help organizations make informed decisions and improve performance.'
 }]
+
+
+ const Clients=[{
+  id:'1',
+  name:'Rajiv Punia',
+  img:'https://i.ibb.co/3kqzS4B/40a8a2166772919-5fb560e7a6387.jpg',
+  stars:'4.5',
+  description:'Sandeep Kumar delivered exceptional custom frontend solutions with React, crafting responsive layouts, animations, and seamless user experiences. Highly recommended!'
+ },
+ {
+  id:'2',
+  name:'Mahesh Chandra',
+  img:'https://i.ibb.co/XDFzwdh/Shamendra-Egodawela.jpg',
+  stars:'4',
+  description:'Codewith Sanju provided outstanding custom frontend development using React, creating smooth animations, responsive designs, and excellent user interactions. Highly recommended!'
+ },
+ {
+  id:'3',
+  name:'Samanta Kashyap',
+  img:'https://i.ibb.co/KNMJcyx/OIP-2.jpg',
+  stars:'4',
+  description:'Codewith Sanju delivered solid frontend work using React. Custom features, responsive layouts, and good attention to detail. Satisfied with the results.'
+ },
+ {
+  id:'4',
+  name:'Virat Gupta',
+  img:'https://i.ibb.co/68k3RcD/Lokendraa.jpg',
+  stars:'5',
+  description:'Sandeep Kumar completed the frontend project efficiently using React. Custom components and responsive design were well-executed. Met expectations.'
+ },
+ {
+  
+ }
+]
+
 const ContData=Contributor.sort((a,b)=>{return a.id-b.id});
 
 const Contributors = () => {
