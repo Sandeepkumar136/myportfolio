@@ -879,53 +879,182 @@
   }
 }
 // Card Crusial
-.contributors-container{
+.contributors-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.c-card{
+.c-card {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
   height: 400px;
-  border: 2px solid #000;
   background-color: #f9f9f9;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 0px 3px 0.5px #999;
+  border-radius: 8px;
+  transform: scale(0.95); /* Initial scale for subtle zoom effect */
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards, scaleUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.c-card-content{
+.c-card-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
   flex-direction: column;
   gap: 0.5rem;
+  transform: translateY(30px); /* Initial position for sliding effect */
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards 0.3s; /* Delay to create a staggered effect */
 }
-.c-card-details{
+.c-card-details {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 0.2rem;
 }
-.c-card-img{
+.c-card-img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  box-shadow: 0px 0px 5px 0.5px #999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scale and shadow transition */
 }
-.c-card-title{
+.c-card-title {
   font-size: 1.5rem;
   font-weight: 800;
   opacity: 0.9;
+  color: #1900ff;
+  text-transform: capitalize;
+  transition: color 0.3s ease, letter-spacing 0.3s ease; /* Smooth color and letter spacing transition */
 }
-.c-card-subtitle{
+.c-card-subtitle {
   font-size: 1.5rem;
   font-weight: 800;
   opacity: 0.5;
+  color: #1900ff;
+  text-transform: capitalize;
+  transition: opacity 0.3s ease; /* Subtle opacity change on hover */
 }
-.c-card-description{
+.c-card-description {
   font-size: 1rem;
   text-align: center;
   font-weight: 400;
   opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Text moves slightly up on hover */
+}
+.c-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Button interaction effect */
+}
+.c-slider-icon {
+  padding: 15px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: #4f3cfe;
+  color: #f9f9f9;
+  border-radius: 50%;
+  transition: 0.5s all ease-in-out;
+}
+.c-slider-icon:hover {
+  background-color: #7f71fe;
+}
+
+/* Hover Effects */
+.c-card:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15); /* Shadow expands on hover */
+}
+.c-card-img:hover {
+  transform: scale(1.15); /* Image zooms in on hover */
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2); /* Image shadow becomes more intense */
+}
+.c-card-title:hover {
+  color: #7f71fe; /* Title color changes on hover */
+  letter-spacing: 1px; /* Text letter-spacing increases on hover */
+}
+.c-card-subtitle:hover {
+  opacity: 1; /* Subtitle becomes more opaque on hover */
+}
+.c-card-description:hover {
+  transform: translateY(-5px); /* Text moves slightly upward */
+  opacity: 1; /* Description becomes fully opaque */
+}
+.c-button:hover {
+  transform: scale(1.1); /* Button grows slightly on hover */
+  background-color: rgba(127, 113, 254, 0.1); /* Add background color change to the button */
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .c-card {
+    width: 100%;
+    height: fit-content;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .c-card-img {
+    width: 70px;
+    height: 70px;
+  }
+  .c-card-title {
+    font-size: 1.1rem;
+    font-weight: 450;
+  }
+  .c-card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 450;
+  }
+  .c-card-description {
+    font-size: 0.8rem;
+  }
+  .c-slider-icon {
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: 450;
+  }
+}
+.dark-mode .c-card {
+  background-color: #111;
+  box-shadow: 0px 0px 3px 0.5px #333;
+}
+.dark-mode .c-card-img {
+  box-shadow: 0px 0px 5px 0.5px #333;
 }

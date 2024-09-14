@@ -20,6 +20,7 @@ const Contributor=[{
 {
   id:'4',
   name:'kiran gupta',
+  title:'Backend Developer',
   img:'https://i.ibb.co/b7qwMBM/review-5.webp',
   description:'Backend developers manage server-side programming, databases, and API integrations, ensuring seamless communication between the client and server systems.'
 },
@@ -49,10 +50,13 @@ const Contributors = () => {
   return (
     <>
     <Loader/>
+    <h2 className="edu-heading">
+        Contributors
+      </h2>
     <div className="contributors-container">
       <div className="c-card">
         <button className="c-button prev" onClick={handlePrev}>
-        <i class='bx bx-left-arrow-alt'></i>
+        <i class='bx bx-left-arrow-alt c-slider-icon'></i>
         </button>
         <div className="c-card-content">
           <img src={img} alt={name} className="c-card-img" />
@@ -63,7 +67,7 @@ const Contributors = () => {
           </div>
         </div>
         <button className="c-button next" onClick={handleNext}>
-        <i class='bx bx-right-arrow-alt'></i>
+        <i class='bx bx-right-arrow-alt c-slider-icon'></i>
         </button>
       </div>
     </div>
