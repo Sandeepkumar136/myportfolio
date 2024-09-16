@@ -38,7 +38,7 @@ const Navbar = () => {
             className="logo-img"
           />
           <p className="logo-title">
-            <i class="bx bx-code-alt"></i> codewith sanju
+            <i className="bx bx-code-alt"></i> codewith sanju
           </p>
         </Link>
         <ul className="nav-items">
@@ -103,7 +103,7 @@ const Navbar = () => {
               className="logo-img"
             />
             <p className="logo-title"  onClick={toggleSidebar}>
-              <i class="bx bx-code-alt"></i> sandeep kumar
+              <i className="bx bx-code-alt"></i> sandeep kumar
             </p>
           </Link>
           <div className="close-toggle-icon" onClick={toggleSidebar}>

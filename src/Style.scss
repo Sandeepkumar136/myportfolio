@@ -915,6 +915,7 @@
   align-items: center;
   flex-direction: column;
   gap: 0.2rem;
+  width: 100%;
 }
 .c-card-img {
   width: 120px;
@@ -1057,4 +1058,69 @@
 }
 .dark-mode .c-card-img {
   box-shadow: 0px 0px 5px 0.5px #333;
+}
+
+
+// Stars
+.star {
+  font-size: 24px;
+  color: lightgray;
+}
+
+.star.full {
+  color: gold;
+}
+
+.star.half {
+  background: linear-gradient(90deg, gold 50%, lightgray 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.star.empty {
+  color: lightgray;
+}
+// timeline-content
+.timeline-content{
+  background-color: #3da2d562;
+  font-size: 16px;
+  color: rgb(53, 53, 53);
+}
+// .timelinetitle{
+//   font-size: 15em;
+//   text-align: center;
+// }
+.timeline-content-title{
+  padding-top: 0.25em;
+}
+.vertical-timeline-element-content{
+  box-shadow: 0 0.25em 0.25em 0 rgba(0, 0, 0, 0.25), 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important ;
+  padding: 2em 3em !important;
+}
+
+.date{
+  color: rgb(201, 251, 255);
+}
+#description{
+  margin: 1.5em 0 2em 0;
+}
+.buttontimeline{
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1b48ff;
+  transition: 0.3s all ease-in-out;
+}
+.buttontimeline:hover{
+  background-color: #345cff;
+}
+@media only screen and (max-width: 1700px) {
+  .vertical-timeline-element-date{
+    display: block !important;
+    float: none !important;
+    color: #111111;
+    margin-top: 1.5em;
+  }
+  
 }
