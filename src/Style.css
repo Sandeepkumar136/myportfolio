@@ -1140,6 +1140,10 @@
   color: rgb(53, 53, 53);
 }
 
+.dark-mode .timeline-content {
+  background-color: transparent;
+}
+
 .timeline-content-title {
   padding-top: 0.25em;
 }
@@ -1149,12 +1153,34 @@
   padding: 2em 3em !important;
 }
 
+.dark-mode .vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.25em 0 rgba(0, 0, 0, 0.25), 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  background-color: #000;
+}
+
 .date {
   color: rgb(201, 251, 255);
 }
 
+.dark-mode .date {
+  color: #fff;
+}
+
 #description {
   margin: 1.5em 0 2em 0;
+}
+
+.dark-mode #description {
+  color: #f9f9f9;
+}
+
+.vertical-timeline-element-title {
+  font-size: 1.2rem;
+  color: #0a0a0a;
+}
+
+.dark-mode .vertical-timeline-element-title {
+  color: #f9f9f9;
 }
 
 .buttontimeline {
@@ -1176,5 +1202,22 @@
     float: none !important;
     color: #111111;
     margin-top: 1.5em;
+  }
+}
+.timelinetitle {
+  font-size: 5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #f700ff, #2e0031);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .vertical-timeline-element-content {
+    padding: 0.5rem !important;
+  }
+  .buttontimeline {
+    padding: 5px 10px;
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=Style.css.map */

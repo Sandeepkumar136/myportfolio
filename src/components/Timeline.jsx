@@ -5,7 +5,7 @@ import 'react-vertical-timeline-component/style.min.css';
 const Timeline = () => {
   return (
     <div>
-      <h1 className='timelinetitle'>Roadmap</h1>
+      <h1 className='timelinetitle'>My Roadmap</h1>
       <VerticalTimeline>
         {
             TimelineElements.map(element=>{
