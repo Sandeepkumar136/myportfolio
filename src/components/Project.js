@@ -65,7 +65,7 @@ const Project = () => {
                 <div className="p-img-contain">
                   <img
                     src={project.img}
-                    alt={project.alt}
+                    alt='Projects Img'
                     style={{ width: "100%", height: "auto" }}
                   />
                 </div>
