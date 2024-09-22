@@ -1392,79 +1392,90 @@
 }
 .s-card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 2px solid #000;
   margin: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.s-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.s-img-contain {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .s-img-contain img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .s-card-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .s-text-contain {
   display: flex;
   justify-content: space-between;
-  border: 2px solid #000;
+  align-items: center;
   width: 100%;
   padding: 0.5rem 1rem;
-  align-items: center;
 }
 
 .s-title {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #111;
+  font-weight: 600;
 }
 
 .bx-info-circle {
-  text-decoration: none;
-  color: #111111;
   font-size: 1.5rem;
+  color: #111;
 }
 
-/* Responsive styles */
 @media (max-width: 1024px) {
   .s-card {
-    padding: 10px;
+    padding: 1rem;
   }
-  .s-title {
-    font-size: 1.5rem;
+  .s-img-contain {
+    height: 180px;
   }
 }
 @media (max-width: 768px) {
   .s-card {
-    padding: 8px;
+    padding: 0.5rem; /* Reduced padding for small screens */
+    margin: 0.5rem;
+  }
+  .s-img-contain {
+    height: 160px;
   }
   .s-title {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
   .s-card {
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 0.5rem; /* Further reduce padding */
+  }
+  .s-img-contain {
+    height: 140px;
   }
   .s-title {
-    font-size: 1.2rem;
-  }
-  .s-card-body p {
-    font-size: 0.9rem;
-  }
-  .c-card-info-btn {
-    padding: 8px;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Adjust title font size */
   }
 }/*# sourceMappingURL=Style.css.map */
