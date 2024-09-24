@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import PureServicesData from './ServicesAPI';
+import ServicesForm from './ServicesForm';
 
 const Services = () => {
   const settings = {
@@ -59,6 +60,9 @@ const Services = () => {
           </div>
         ))}
       </Slider>
+      <div className="form-container">
+        <ServicesForm/>
+      </div>
     </div>
   );
 };
