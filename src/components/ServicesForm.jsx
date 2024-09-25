@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceData = ['Frontend Development', 'Backend Development', 'Accounts', 'Data Analysis', 'Other Preferred', 'None'];
 
@@ -14,30 +17,57 @@ const ServicesForm = () => {
 
   const [errors, setErrors] = useState({});
 
+  // Validate function
   const validate = () => {
     const newErrors = {};
     
     if (!formValues.firstName) {
       newErrors.firstName = 'First name is required';
+      toast.error('First name is required', { autoClose: 5000 });
     }
     if (!formValues.lastName) {
       newErrors.lastName = 'Last name is required';
+      toast.error('Last name is required', { autoClose: 5000 });
     }
     if (!formValues.email.includes('@')) {
       newErrors.email = 'Invalid email address';
+      toast.error('Invalid email address', { autoClose: 5000 });
     }
     if (formValues.number && (formValues.number.length > 10 || formValues.number.length < 10)) {
       newErrors.number = 'Contact number must be 10 digits';
+      toast.warning('Contact number must be 10 digits', { autoClose: 5000 });
+    }
+    if (!formValues.service) {
+      newErrors.service = 'Service is required';
+      toast.error('Service is required', { autoClose: 5000 });
+    }
+    if (!formValues.requirement) {
+      newErrors.requirement = 'Requirement is required';
+      toast.error('Requirement is required', { autoClose: 5000 });
     }
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const form = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
+
+    // Validate the form
     const validationErrors = validate();
     setErrors(validationErrors);
+
+    // Only send email if no validation errors
     if (Object.keys(validationErrors).length === 0) {
-      console.log('Form submitted', formValues);
+      emailjs.sendForm('service_uro8zbs', 'template_m7b4mb9', form.current, 'Yeg3nySFJq-Ihboa_')
+        .then((result) => {
+          toast.success('Email sent successfully!', {
+            autoClose: 5000
+          });
+        }, (error) => {
+          toast.error('Failed to send email. Please try again.', {
+            autoClose: 5000
+          });
+        });
     }
   };
 
@@ -47,7 +77,7 @@ const ServicesForm = () => {
 
   return (
     <div className="form-container">
-      <form className="form" onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail} className="form">
         <div className="form-overflow">
           <label htmlFor="first-name" className="first-name">Enter First Name</label>
           <input
@@ -58,7 +88,6 @@ const ServicesForm = () => {
             value={formValues.firstName}
             onChange={handleInputChange}
           />
-          {errors.firstName && <span className="error">{errors.firstName}</span>}
         </div>
         <div className="form-overflow">
           <label htmlFor="last-name" className="last-name">Enter Last Name</label>
@@ -70,7 +99,6 @@ const ServicesForm = () => {
             value={formValues.lastName}
             onChange={handleInputChange}
           />
-          {errors.lastName && <span className="error">{errors.lastName}</span>}
         </div>
         <div className="form-overflow">
           <label htmlFor="email" className="email">Enter Email Address</label>
@@ -82,7 +110,6 @@ const ServicesForm = () => {
             value={formValues.email}
             onChange={handleInputChange}
           />
-          {errors.email && <span className="error">{errors.email}</span>}
         </div>
         <div className="form-overflow">
           <label htmlFor="number" className="number">Enter Contact Number (optional)</label>
@@ -94,7 +121,6 @@ const ServicesForm = () => {
             value={formValues.number}
             onChange={handleInputChange}
           />
-          {errors.number && <span className="error">{errors.number}</span>}
         </div>
         <div className="form-overflow">
           <label htmlFor="services" className="services">Choose a Service</label>
@@ -128,6 +154,15 @@ const ServicesForm = () => {
           <button type="submit" className="form-button">Send Your Requirement</button>
         </div>
       </form>
+      <ToastContainer position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover />
     </div>
   );
 };

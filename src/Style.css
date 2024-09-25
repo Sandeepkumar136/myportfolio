@@ -1488,11 +1488,10 @@
 
 .form {
   display: flex;
-  flex-direction: column;
+  justify-content: start;
   flex-wrap: wrap;
   padding: 1rem;
   gap: 1rem;
-  max-width: 600px;
   width: 100%;
 }
 
@@ -1501,7 +1500,6 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  width: 100%;
 }
 
 .input-form {
@@ -1545,6 +1543,10 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: start;
+  margin: auto;
+  align-items: self-end;
 }
 
 .form-button:hover {
@@ -1557,27 +1559,44 @@
 }
 
 /* Desktop view - Inputs in rows */
-@media screen and (min-width: 769px) {
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 0.5rem;
+  }
   .form {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    padding: 0.2rem;
   }
   .form-overflow {
-    width: 48%;
+    width: 100%;
+    margin: 0; /* Add margin left and right */
+  }
+  .input-form {
+    padding: 0.8rem 0.5rem;
+    width: 100%; /* Ensure full width for mobile inputs */
   }
   #textarea {
-    width: 100%;
+    height: 120px;
+    margin: 0 0.5rem; /* Add margin left and right */
+  }
+  #textarea:focus {
+    height: 180px;
   }
   .form-button {
     width: 100%;
     text-align: center;
+    margin: 0 0.5rem; /* Add margin to button */
   }
 }
 /* Mobile view */
 @media screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+    padding: 0.2rem;
+  }
   .input-form {
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1rem;
   }
   #textarea {
     height: 120px;
