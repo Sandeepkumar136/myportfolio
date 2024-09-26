@@ -86,6 +86,7 @@ const ServicesForm = () => {
             id="first-name"
             className="input-form"
             value={formValues.firstName}
+            placeholder='Enter First Name'
             onChange={handleInputChange}
           />
         </div>
@@ -98,6 +99,7 @@ const ServicesForm = () => {
             className="input-form"
             value={formValues.lastName}
             onChange={handleInputChange}
+            placeholder='Enter Last Name'
           />
         </div>
         <div className="form-overflow">
@@ -108,6 +110,7 @@ const ServicesForm = () => {
             id="email"
             className="input-form"
             value={formValues.email}
+            placeholder='Enter Email Address'
             onChange={handleInputChange}
           />
         </div>
@@ -118,6 +121,7 @@ const ServicesForm = () => {
             name="number"
             id="number"
             className="input-form"
+            placeholder='Enter Mobile Number'
             value={formValues.number}
             onChange={handleInputChange}
           />
@@ -147,7 +151,7 @@ const ServicesForm = () => {
             cols="30"
             rows="5"
             value={formValues.requirement}
-            onChange={handleInputChange}
+            onChange={handleInputChange} placeholder='Enter Message here!'
           />
         </div>
         <div className="form-overflow">

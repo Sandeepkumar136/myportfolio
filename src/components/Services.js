@@ -60,6 +60,7 @@ const Services = () => {
           </div>
         ))}
       </Slider>
+      <h2 className="main-title">Enter Your Requirements</h2>
       <div className="form-container">
         <ServicesForm/>
       </div>

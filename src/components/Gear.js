@@ -143,7 +143,7 @@ const Gear = () => {
 
   return (
     <>
-      <h2 className="edu-heading">My Gears</h2>
+      <h2 className="timelinetitle">My Gears</h2>
       <div className="gear-container">
         <div className="gear-cards">
           {currentItems.map((e) => (

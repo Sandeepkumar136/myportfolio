@@ -15,16 +15,16 @@ const Contact = () => {
   return (
     <div>
       <Loader />
-      <h2 className="main-title">Terms and Conditions</h2>
+      <h2 className="main-title" data-aos="fade-up">Terms and Conditions</h2>
       <div className="t-container">
         {
           TermsandConditons.map((e) => (
-            <div className="t-contain">
-              <h3 className="t-title">{e.title}</h3>
+            <div className="t-contain" key={e.id}>
+              <h3 className="t-title" data-aos="fade-right">{e.title}</h3>
               <p className="t-desc">{e.description}</p>
               <ul className="t-items">
-                <li className="t-list">{e.alies}</li>
-                <li className="t-list">{e.alies1}</li>
+                <li className="t-list" style={{ display: e.alies ? 'block' : 'none' }}>{e.alies}</li>
+                <li className="t-list" style={{ display: e.alies1 ? 'block' : 'none' }}>{e.alies1}</li>
               </ul>
             </div>
           ))
