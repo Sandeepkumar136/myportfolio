@@ -1662,6 +1662,16 @@
   color: #1c1c1e;
   animation: fadeIn 1s ease-out;
 }
+.main-title-2{
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1c1c1e;
+  animation: fadeIn 1s ease-out;
+}
+.dark-mode .main-title-2{
+  color: #f9f9f9;
+}
 .f-container,
 .t-container {
   display: flex;
@@ -1754,6 +1764,14 @@
     padding: 0.5rem;
     font-size: 1rem;
   }
+  .main-title-2{
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .dark-mode .main-title-2{
+    color: #f9f9f9;
+  }
   .f-contain,
   .t-contain {
     display: flex;
@@ -1817,4 +1835,80 @@
 .dark-mode .faq-answer {
   color: #f9f9f9;
   background-color: #111;
+}
+
+
+// Chart 
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full-screen height */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 80%; /* Takes up 80% of the screen */
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.git-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.git-label {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+#git_days {
+  padding: 8px;
+  width: 120px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.git-btn {
+  padding: 8px 16px;
+  background-color: #5a29d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: background-color 0.3s ease;
+}
+
+.git-btn:hover {
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 768px) {
+  .git-btn {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+  }
+  #git_days {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+  }
+  .git-label {
+      font-size: 0.8rem;
+  }
 }

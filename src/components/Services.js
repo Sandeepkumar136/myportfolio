@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import PureServicesData from './ServicesAPI';
 import ServicesForm from './ServicesForm';
+import GitHubActivityChart from './Chart';
 
 const Services = () => {
   const settings = {
@@ -60,9 +61,13 @@ const Services = () => {
           </div>
         ))}
       </Slider>
-      <h2 className="main-title">Enter Your Requirements</h2>
+      <h2 className="main-title-2">Enter Your Requirements</h2>
       <div className="form-container">
         <ServicesForm/>
+      </div>
+      <div className="chart-container">
+      <h1 className='timelinetitle'>My Roadmap</h1>
+        <GitHubActivityChart/>
       </div>
     </div>
   );
