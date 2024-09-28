@@ -177,7 +177,7 @@ const Contributors = () => {
   const { name: clientsName, img: clientsImg, stars: clientsStars, description: clientsDescription } = FinalClientArr[currentIndexClients];
 
   return (
-    <>
+    <div className='cont-main-container'>
       <Loader />
       <h2 className="edu-heading">
         Contributors
@@ -221,7 +221,7 @@ const Contributors = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

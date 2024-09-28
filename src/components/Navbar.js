@@ -69,7 +69,7 @@ const Navbar = () => {
           </li>
           <li className="nav-list">
             <Link to="/contact" className="nav-link">
-              contact us
+              About us
             </Link>
           </li>
         </ul>
@@ -139,7 +139,7 @@ const Navbar = () => {
             </li>
             <li className="side-list">
               <Link to="/contact" className="side-link"  onClick={toggleSidebar}>
-                contact us
+                about us
               </Link>
             </li>
           </ul>

@@ -1013,6 +1013,10 @@
     font-size: 0.8rem;
   }
 }
+.cont-main-container {
+  height: 100%;
+}
+
 .contributors-container {
   display: flex;
   justify-content: center;
