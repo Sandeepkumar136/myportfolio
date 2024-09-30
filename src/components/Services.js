@@ -66,7 +66,7 @@ const Services = () => {
         <ServicesForm/>
       </div>
       <div className="chart-container">
-      <h1 className='timelinetitle'>My Roadmap</h1>
+      <h1 className='timelinetitle'>My Commits</h1>
         <GitHubActivityChart/>
       </div>
     </div>
