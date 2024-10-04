@@ -90,15 +90,15 @@ const Project = () => {
           ))}
         </Slider>
       </div>
-      <h2 className='Project-heading'>Certificates</h2>
+      <h1 className='timelinetitle'>My Certificates</h1>
 
       <div className="cer-container">
         <div className="certif">
           {certificateImages.map((e)=>{
             return(
-              <div key={e.id} className="cetif-cards">
+                <div key={e.id} className="cetif-cards">
               <img src={e.url} alt={e.url} className="certificateimages" />
-            </div>
+              </div>
             )
           })
           }
