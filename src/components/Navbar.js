@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  let location=useLocation();
+  let navigate=useNavigate();
+
+  
+
+  useEffect(() => {
+    console.log(location.pathname);
+  }, [location]);
+  
+
   const [isSidebaropen, setisSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setisSidebarOpen(!isSidebaropen);
@@ -31,7 +41,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbar">
-        <Link to="/" className="logo-contain">
+        <Link to="/" className={`logo-contain`}>
           <img
             src="https://i.ibb.co/RNSJXNC/FB-IMG-1652607151685.jpg"
             alt="Logo"
@@ -42,33 +52,33 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className="nav-items">
-          <li className="nav-list">
-            <Link to="/education" className="nav-link">
+          <li className={`nav-list ${location.pathname==='/education'?'activenavbar':''}`}>
+            <Link to="/education" className={`nav-link`}>
               education
             </Link>
           </li>
-          <li className="nav-list">
-            <Link to="/gear" className="nav-link">
+          <li className={`nav-list ${location.pathname==='/gear'?'activenavbar':''}`}>
+            <Link to="/gear" className={`nav-link`}>
               gears
             </Link>
           </li>
-          <li className="nav-list">
-            <Link to="/contributor" className="nav-link">
+          <li className={`nav-list ${location.pathname==='/contributor'?'activenavbar':''}`}>
+            <Link to="/contributor" className={`nav-link`}>
               contributors
             </Link>
           </li>
-          <li className="nav-list">
-            <Link to="/project" className="nav-link">
+          <li className={`nav-list ${location.pathname==='/project'?'activenavbar':''}`}>
+            <Link to="/project" className={`nav-link`}>
               projects
             </Link>
           </li>
-          <li className="nav-list">
-            <Link to="/services" className="nav-link">
+          <li className={`nav-list ${location.pathname==='/services' ? 'activenavbar':''}`}>
+            <Link to="/services" className={`nav-link`}>
               services
             </Link>
           </li>
-          <li className="nav-list">
-            <Link to="/contact" className="nav-link">
+          <li className={`nav-list ${location.pathname==='/contact'?'activenavbar':''}`}>
+            <Link to="/contact" className={`nav-link`}>
               About us
             </Link>
           </li>
@@ -112,32 +122,32 @@ const Navbar = () => {
         </div>
         <div className="s-side-items">
           <ul className="side-items">
-            <li className="side-list">
+            <li className={`side-list ${location.pathname==='/education'?'activenavbar':''}`}>
               <Link to="/education" className="side-link"  onClick={toggleSidebar}>
                 education
               </Link>
             </li>
-            <li className="side-list">
+            <li className={`side-list ${location.pathname==='/gear'?'activenavbar':''}`}>
               <Link to="/gear" className="side-link"  onClick={toggleSidebar}>
                 gears
               </Link>
             </li>
-            <li className="side-list">
+            <li className={`side-list ${location.pathname==='/contributor'?'activenavbar':''}`}>
               <Link to="/contributor" className="side-link"  onClick={toggleSidebar}>
                 contributors
               </Link>
             </li>
-            <li className="side-list">
+            <li className={`side-list ${location.pathname==='/project'?'activenavbar':''}`}>
               <Link to="/project" className="side-link"  onClick={toggleSidebar}>
                 projects
               </Link>
             </li>
-            <li className="side-list">
+            <li className={`side-list ${location.pathname==='/services'?'activenavbar':''}`}>
               <Link to="/services" className="side-link"  onClick={toggleSidebar}>
                 services
               </Link>
             </li>
-            <li className="side-list">
+            <li className={`side-list ${location.pathname==='/contact'?'activenavbar':''}`}>
               <Link to="/contact" className="side-link"  onClick={toggleSidebar}>
                 about us
               </Link>

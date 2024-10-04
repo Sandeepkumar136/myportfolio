@@ -185,7 +185,7 @@ const Contributors = () => {
       <div className="contributors-container">
         <div className="c-card">
           <button className="c-button prev" onClick={handlePrev}>
-            <i class='bx bx-left-arrow-alt c-slider-icon'></i>
+            <i className='bx bx-left-arrow-alt c-slider-icon'></i>
           </button>
           <div className="c-card-content">
             <img src={img} alt={name} className="c-card-img" />
@@ -196,7 +196,7 @@ const Contributors = () => {
             </div>
           </div>
           <button className="c-button next" onClick={handleNext}>
-            <i class='bx bx-right-arrow-alt c-slider-icon'></i>
+            <i className='bx bx-right-arrow-alt c-slider-icon'></i>
           </button>
         </div>
       </div>
@@ -206,7 +206,7 @@ const Contributors = () => {
       <div className="contributors-container">
         <div className="c-card">
           <button className="c-button prev" onClick={handlePrevClients}>
-            <i class='bx bx-left-arrow-alt c-slider-icon'></i>
+            <i className='bx bx-left-arrow-alt c-slider-icon'></i>
           </button>
           <div className="c-card-content">
             <img src={clientsImg} alt={clientsName} className="c-card-img" />
@@ -217,7 +217,7 @@ const Contributors = () => {
             </div>
           </div>
           <button className="c-button next" onClick={handleNextClients}>
-            <i class='bx bx-right-arrow-alt c-slider-icon'></i>
+            <i className='bx bx-right-arrow-alt c-slider-icon'></i>
           </button>
         </div>
       </div>

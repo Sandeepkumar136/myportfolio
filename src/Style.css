@@ -2021,4 +2021,7 @@ canvas {
     width: 100%;
     height: 100%;
   }
+}
+.activenavbar {
+  background-color: #d000ff;
 }/*# sourceMappingURL=Style.css.map */

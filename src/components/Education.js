@@ -106,7 +106,7 @@ const Education = () => {
               </p>
             </div>
             <button className='toggle-btn-e-card' onClick={() => toggleDescription(item.id)}>
-              {expandedId === item.id ? <i class='toggle-icon-e bx bx-chevron-up'></i> : <i class='toggle-icon-e bx bx-chevron-down' ></i>}
+              {expandedId === item.id ? <i className='toggle-icon-e bx bx-chevron-up'></i> : <i className='toggle-icon-e bx bx-chevron-down' ></i>}
             </button>
           </div>
         ))}
@@ -116,21 +116,21 @@ const Education = () => {
       </h2>
       <div className="lang-container">
         <ul className="lang-item">
-          <li className="lang-list"><i class='lang-icon bx bxl-html5' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-css3' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-javascript' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-sass' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-react' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-nodejs' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-python'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-vuejs' ></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-visual-studio'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-mongodb'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxs-terminal'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-angular'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-bootstrap'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-github'></i></li>
-          <li className="lang-list"><i class='lang-icon bx bxl-redux'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-html5' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-css3' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-javascript' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-sass' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-react' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-nodejs' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-python'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-vuejs' ></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-visual-studio'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-mongodb'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxs-terminal'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-angular'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-bootstrap'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-github'></i></li>
+          <li className="lang-list"><i className='lang-icon bx bxl-redux'></i></li>
         </ul>
       </div>
       <h2 className="edu-heading">
