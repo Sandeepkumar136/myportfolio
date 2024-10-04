@@ -1309,9 +1309,20 @@
   color: transparent;
 }
 
+.timelinetitle-2 {
+  font-size: 5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #f700ff, #2e0031);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 @media only screen and (max-width: 768px) {
   .timelinetitle {
     font-size: 2rem;
+  }
+  .timelinetitle-2 {
+    margin-top: 1rem;
   }
   .vertical-timeline-element-content {
     padding: 0.5rem !important;

@@ -90,7 +90,7 @@ const Project = () => {
           ))}
         </Slider>
       </div>
-      <h1 className='timelinetitle'>My Certificates</h1>
+      <h1 className='timelinetitle-2'>My Certificates</h1>
 
       <div className="cer-container">
         <div className="certif">
