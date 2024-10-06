@@ -21,7 +21,7 @@ const Timeline = () => {
                     >
                         <h3 className='vertical-timeline-element-title'>{element.title}</h3>
                         <p id='description'>{element.description}</p>
-                        {showButton && <a href='/' className='buttontimeline'>{element.buttonText}</a>}
+                        {showButton && <a href={element.link} target='blank' className='buttontimeline'>{element.buttonText}</a>}
 
                     </VerticalTimelineElement>
                 )
