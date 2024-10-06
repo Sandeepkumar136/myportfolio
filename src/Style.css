@@ -1322,7 +1322,7 @@
     font-size: 2rem;
   }
   .timelinetitle-2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 2rem;
   }
   .vertical-timeline-element-content {
@@ -1609,6 +1609,11 @@
   box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.35), 0 0.6em 1.5em 0 rgba(0, 0, 0, 0.25);
 }
 
+.dark-mode .input-form {
+  background-color: #111;
+  color: #f9f9f9;
+}
+
 #textarea {
   border: none;
   outline: none;
@@ -1625,12 +1630,17 @@
   height: 200px;
 }
 
+.dark-mode #textarea {
+  background-color: #111;
+  color: #f9f9f9;
+}
+
 .form-button {
   border: none;
   outline: none;
   padding: 0.5rem 1rem;
   box-shadow: 0 0.25em 0.25em 0 rgba(0, 0, 0, 0.25), 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15);
-  background-color: #7839ff;
+  background-color: #bd39ff;
   color: #f9f9f9;
   border-radius: 5px;
   cursor: pointer;
@@ -1642,7 +1652,7 @@
 }
 
 .form-button:hover {
-  background-color: #5a29d9;
+  background-color: #b329d9;
 }
 
 .error {
